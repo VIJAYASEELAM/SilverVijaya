@@ -1,0 +1,16 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+
+# Railway deployment files (copied by tools/discord-review-bot/setup-railway.sh)
+tools/discord-review-bot/ci_checks/
+tools/discord-review-bot/rubrics/
+task-proposal-results/
+
+# /review-task skill artifacts (downloaded in worktrees)
+.review/
+
+# Rubric tuning eval results and cached clones
+tools/rubric-tuning/results/
+tools/rubric-tuning/.cache/
