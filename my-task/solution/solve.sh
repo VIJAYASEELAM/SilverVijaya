@@ -13,7 +13,12 @@ for p in "${PATCH_PATHS[@]}"; do
 	fi
 done
 if [ -n "$found" ]; then
-	git apply -p0 "$found" || { echo "git apply failed for $found" >&2; exit 1; }
+	# If patch lives under environment, apply from there so paths like a/src/... match
+	if [[ "$found" == *"environment/"* ]]; then
+		(cd environment && git apply -p0 "$(basename "$found")") || { echo "git apply failed for $found" >&2; exit 1; }
+	else
+		git apply -p0 "$found" || { echo "git apply failed for $found" >&2; exit 1; }
+	fi
 else
 	echo "No solution patch found; nothing to apply"
 fi
