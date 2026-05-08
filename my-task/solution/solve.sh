@@ -15,7 +15,8 @@ done
 if [ -n "$found" ]; then
 	# If patch lives under environment, apply from there so paths like a/src/... match
 	if [[ "$found" == *"environment/"* ]]; then
-		(cd environment && git apply -p0 "$(basename "$found")") || { echo "git apply failed for $found" >&2; exit 1; }
+		# environment patch paths use a/src/... format; strip the leading a/ with -p1
+		(cd environment && git apply -p1 "$(basename "$found")") || { echo "git apply failed for $found" >&2; exit 1; }
 	else
 		git apply -p0 "$found" || { echo "git apply failed for $found" >&2; exit 1; }
 	fi
