@@ -14,6 +14,12 @@ export class WorkflowExecutionCoordinator {
     callback: () => void
   ): void {
 
+    if (
+      this.lifecycle.getState(workflow.id) === "archived"
+    ) {
+      return;
+    }
+
     this.scheduler.schedule(
       workflow,
       delay,
