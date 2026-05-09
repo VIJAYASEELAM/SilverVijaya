@@ -1,0 +1,2 @@
+No solution patch found; nothing to apply
+error: can't open patch 'fix.patch': No such file or directory

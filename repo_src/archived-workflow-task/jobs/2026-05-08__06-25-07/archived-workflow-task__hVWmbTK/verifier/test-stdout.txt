@@ -1,0 +1,32 @@
+
+up to date, audited 459 packages in 2s
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+FAIL tests/workflowExecutionCoordinator.test.ts (5.597 s)
+  WorkflowExecutionCoordinator
+    ✕ does not schedule archived workflows (17 ms)
+
+  ● WorkflowExecutionCoordinator › does not schedule archived workflows
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      30 |     expect(
+      31 |       scheduler.isScheduled("wf-1")
+    > 32 |     ).toBe(false);
+         |       ^
+      33 |   });
+      34 | });
+
+      at Object.<anonymous> (tests/workflowExecutionCoordinator.test.ts:32:7)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        5.899 s
+Ran all test suites matching /tests\/workflowExecutionCoordinator.test.ts/i.

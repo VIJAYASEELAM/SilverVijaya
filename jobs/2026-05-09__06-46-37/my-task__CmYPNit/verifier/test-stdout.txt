@@ -1,0 +1,19 @@
+Verifier started: searching for environment test script
+Found test script: ./tests/test.sh
+./tests/test.sh: line 3: cd: /tmp/project/environment: No such file or directory
+
+up to date, audited 459 packages in 2s
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PASS tests/workflowExecutionCoordinator.test.ts (5.931 s)
+  WorkflowExecutionCoordinator
+    ✓ does not schedule archived workflows (4 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6.247 s
+Ran all test suites matching /tests\/workflowExecutionCoordinator.test.ts/i.

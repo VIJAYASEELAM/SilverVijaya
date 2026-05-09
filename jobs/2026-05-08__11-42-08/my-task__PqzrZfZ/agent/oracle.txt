@@ -1,0 +1,2 @@
+error: corrupt patch at line 19
+git apply failed for fix.patch
