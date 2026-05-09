@@ -1,0 +1,4 @@
+Applying patch from: fix.patch
+git apply failed; see /tmp/git_apply.err or /tmp/git_apply_env.err
+error: patch failed: src/execution/WorkflowExecutionCoordinator.ts:14
+error: src/execution/WorkflowExecutionCoordinator.ts: patch does not apply

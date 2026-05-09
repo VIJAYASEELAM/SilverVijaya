@@ -1,0 +1,12 @@
+Verifier started: searching for environment test script
+No explicit test script found; attempting npm test in environment/
+Attempting npm test in repository root
+PASS tests/workflowExecutionCoordinator.test.ts (5.616 s)
+  WorkflowExecutionCoordinator
+    ✓ does not schedule archived workflows (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        5.881 s
+Ran all test suites.

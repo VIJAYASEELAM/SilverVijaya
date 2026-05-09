@@ -1,0 +1,100 @@
+{
+    "id": "0f69dd71-c5f0-4f57-8c21-f8d14298f136",
+    "task_name": "my-task",
+    "trial_name": "my-task__gJchyEg",
+    "trial_uri": "file:///workspaces/SilverVijaya/jobs/2026-05-08__12-04-54/my-task__gJchyEg",
+    "task_id": {
+        "path": "my-task"
+    },
+    "source": null,
+    "task_checksum": "4b54a8950ae7bb29abb35430d4837131880cca1e8176e418f4a038f4f8c0e72a",
+    "config": {
+        "task": {
+            "path": "my-task",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "my-task__gJchyEg",
+        "trials_dir": "jobs/2026-05-08__12-04-54",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "nop",
+            "import_path": null,
+            "model_name": null,
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "77fc3d04-c5c0-4653-b60e-53357f9606ca"
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-08T12:04:59.200430Z",
+    "finished_at": "2026-05-08T12:05:30.339284Z",
+    "environment_setup": {
+        "started_at": "2026-05-08T12:05:03.839961Z",
+        "finished_at": "2026-05-08T12:05:17.751114Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-08T12:05:17.751159Z",
+        "finished_at": "2026-05-08T12:05:17.751232Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-08T12:05:17.751297Z",
+        "finished_at": "2026-05-08T12:05:17.751331Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-08T12:05:17.986307Z",
+        "finished_at": "2026-05-08T12:05:18.793223Z"
+    },
+    "step_results": null
+}

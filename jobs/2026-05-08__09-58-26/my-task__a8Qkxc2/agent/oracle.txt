@@ -1,0 +1,3 @@
+/solution/solve.sh: line 3: cd: /tmp/project: No such file or directory
+error: can't open patch 'fix.patch': No such file or directory
+error: No valid patches in input (allow with "--allow-empty")

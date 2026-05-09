@@ -1,0 +1,3 @@
+Verifier started: searching for environment test script
+No explicit test script found; attempting npm test in environment/
+Unable to run tests: no test script or environment test runner found

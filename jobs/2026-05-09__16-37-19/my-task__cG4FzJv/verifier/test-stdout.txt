@@ -1,0 +1,6 @@
+Verifier started: searching for environment test script
+.patched_by_oracle not found — enforcing buggy base state for nop
+No revert patch applied — attempting programmatic revert (remove guard block)
+programmatic revert applied
+No explicit test script found; attempting npm test in environment/
+Unable to run tests: no test script or environment test runner found
