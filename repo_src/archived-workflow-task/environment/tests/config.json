@@ -1,0 +1,11 @@
+{
+  "repo": "orbitflow",
+  "base_commit": "91b5351",
+  "fail_to_pass": [
+    "tests/workflowExecutionCoordinator.test.ts"
+  ],
+  "pass_to_pass": [],
+  "test_patch": "",
+  "patch": "",
+  "problem_statement": ""
+}
