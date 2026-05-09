@@ -1,67 +1,21 @@
-# Benchmark Template
+# OrbitFlow
 
-This is a template for building agent benchmarks with [Harbor](https://harborframework.com).
+OrbitFlow is a workflow orchestration and execution platform designed for managing asynchronous workflow pipelines.
 
-It provides structure, CI workflows, and example tasks to help you build your own benchmark following [best practices](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) and leveraging automation where it is appropriate. Everything is designed to be customized to your benchmark.
+## Features
 
-## What's Included
+- Workflow execution engine
+- Retry policies
+- Concurrent execution management
+- Workflow scheduling
+- Timeout handling
+- Lifecycle management
+- Execution history tracking
+- In-memory persistence layer
 
-- **[Contributing Guide](CONTRIBUTING.md)**: guide for creating, testing, and submitting tasks
-  - [PR Checklist](.github/pull_request_template.md): submission template for contributors
-- **[Task Proposal Rubric](rubrics/task-proposal.md)**: LLM evaluation criteria for task proposals (Discussions, Discord)
-  - [Discord Review Bot](tools/discord-review-bot/): auto-reviews proposals in Discord
-  - [Discussion Review Workflow](.github/workflows/discussion-review.yml): auto-reviews proposals in GitHub Discussions
-  - [Batch Grader](tools/batch-grader/): grade all tasks against the rubric, useful for iterating on it
-- **[Task Review Automation](TASK_REVIEW_AUTOMATION.md)**: CI automation for validating task PRs
-  - [Static checks](TASK_REVIEW_AUTOMATION.md#static-checks): path validation, Dockerfile sanity, canary, metadata, test references
-  - [Implementation rubric review](TASK_REVIEW_AUTOMATION.md#implementation-rubric-review): `harbor check` with [27-criteria rubric](rubrics/task-implementation.toml) (auto on PR)
-  - [Similarity check](TASK_REVIEW_AUTOMATION.md#check-similarity): TF-IDF duplicate detection
-  - [Docker build + oracle/nop validation](TASK_REVIEW_AUTOMATION.md#docker-build-oracle-nop): environment builds, solution passes, no-op fails
-  - [Agent trials](TASK_REVIEW_AUTOMATION.md#agent-trials): multi-agent runs with analysis
-  - [Cheat trials](TASK_REVIEW_AUTOMATION.md#cheat-trials): adversarial reward-hack detection
-- **[Test Tasks](ci_checks/test-tasks/)**: intentionally broken tasks for regression testing the QA pipeline
-- **[Reviewing Guide](REVIEWING.md)**: guide for human reviewers evaluating task PRs
+## Development
 
-## Getting Started
-
-#### 1. Create your repo
-
-Click "Use this template" on GitHub.
-
-#### 2. Customize
-
-Grep for `CUSTOMIZE` in source files to find what to edit.
-
-> [!TIP]
-> Edit [`rubrics/task-implementation.toml`](rubrics/task-implementation.toml) to define criteria for evaluating task implementations on PRs.
-
-> [!TIP]
-> Edit [`rubrics/task-proposal.md`](rubrics/task-proposal.md) to define criteria for evaluating task proposals on Discussions and Discord.
-
-> [!TIP]
-> Edit [`.github/harbor-run-defaults.yml`](.github/harbor-run-defaults.yml) to change default agents, trial count, timeout, and trigger.
-
-#### 3. Set repo secrets
-
-| Secret | Used by | Required? |
-|--------|---------|-----------|
-| `ANTHROPIC_API_KEY` | Implementation rubric review | Yes |
-| `GPTZERO_API_KEY` | AI detection (optional, not in default workflow) | Optional |
-| `OPENAI_API_KEY` | `/run` trials | Optional |
-| `GEMINI_API_KEY` | `/run` trials | Optional |
-| `MODAL_TOKEN_ID`, `MODAL_TOKEN_SECRET` | `/run`, `/cheat`, and `/validate` when `env: modal` / `validate_env: modal` is set in `harbor-run-defaults.yml` (or comment override) | Optional |
-
-#### 4. Get future improvements
+Install dependencies:
 
 ```bash
-# One-time setup
-git remote add template https://github.com/harbor-framework/benchmark-template.git
-
-# Pull latest
-git fetch template
-git merge template/main
-```
-
-#### 5. Join the community
-
-Join our active [Terminal Bench community](https://discord.gg/ZvcWupVXjz) to share your benchmark or get help.
+npm install
