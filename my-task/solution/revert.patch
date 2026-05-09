@@ -1,0 +1,14 @@
+diff --git a/src/execution/WorkflowExecutionCoordinator.ts b/src/execution/WorkflowExecutionCoordinator.ts
+index 61f75b2..749fe22 100644
+--- a/src/execution/WorkflowExecutionCoordinator.ts
++++ b/src/execution/WorkflowExecutionCoordinator.ts
+@@ -14,12 +14,6 @@ export class WorkflowExecutionCoordinator {
+-    if (
+-      this.lifecycle.getState(workflow.id) === "archived"
+-    ) {
+-      return;
+-    }
+-
+     this.scheduler.schedule(
+       workflow,
+       delay,
