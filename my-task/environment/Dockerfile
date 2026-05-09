@@ -3,8 +3,9 @@ FROM node:20
 WORKDIR /tmp/project
 
 COPY package*.json ./
-
-RUN npm install
+# Prefer npm ci when a lockfile is present
+COPY package-lock.json ./ || true
+RUN if [ -f package-lock.json ]; then npm ci --no-audit --no-fund || npm install --no-audit --no-fund; else npm install --no-audit --no-fund; fi
 
 COPY . .
 
